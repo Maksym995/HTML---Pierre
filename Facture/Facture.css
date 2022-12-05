@@ -1,0 +1,39 @@
+.background {
+background-image: url("../HTML-CSS/logoCF2M.png");
+background-size: 150px;
+background-repeat: no-repeat;
+background-position: center top;  }
+
+body {text-align: center;
+align-content: center;}
+
+h1 {text-size-adjust: 300%; margin-top: 170px;}
+
+div {text-align: center;
+margin: 0 auto;
+width: 250px;
+border-style: dotted;
+border-color: rgb(0,128,255);
+border-width: 3px;}
+
+.italic {font-style: italic;
+}
+
+p {text-align: left; 
+margin-left: 10px;}
+
+table, tr, td, th {margin: 0 auto; border: black 2px solid;
+border-collapse: collapse;
+}
+
+.coloneun {width: 500px;
+     text-align: left;}
+
+.description {width: 500px;
+text-align: center;}
+
+.taille {width: 100px;}
+
+#center { text-align: center;}
+
+.prix {text-align: right;}

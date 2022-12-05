@@ -1,0 +1,66 @@
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Flexbox - exemple 06</title>
+        <style>
+            section {
+                background-color: beige;
+                border: 3px dotted red;
+            }
+            
+            article {
+                width: 8em;		/* largeur de l'item */
+                min-height: 5em;
+                line-height: 5em;
+                border: 2px solid black;
+                border-radius: 1em;
+                text-align: center;
+                background-color: aqua;
+            }
+            
+            .parent {
+				display:flex;				/* positionné en élément block */
+				flex-direction: row;		/* axe principal = axe horizontal */
+				flex-wrap: wrap;			
+				/* passe à la ligne suivante si pas assez de place sur une ligne */
+				justify-content: flex-start;
+				/* les items démarrent au début de l'axe principal */
+				align-items: flex-start;
+				/* les items démarrent au début de l'axe secondaire */
+				align-content: space-evenly;
+				/* flex-start: la 2ème ligne, contenant les items restants, démarre au début de l'espace disponible, donc directement sous la 1ère ligne */
+				/* flex-end: la 2ème ligne, contenant les items restants, s'arrête à la fin de l'espace disponible dans le conteneur, donc la 1ère ligne se place directement au-dessus de cette 2ème ligne */
+				/* center: les deux lignes avec les items, se placent au centre de l'espace disponible */
+				/* space-between: si on n'a pas assez d'espace sur une ligne, une 2ème ligne est créée. La 1ère ligne va se mettre au début, la 2ème ligne va se mettre à la fin, et il y aura de l'espace entre les deux lignes */
+				/* space-around: si on n'a pas assez d'espace sur une ligne, une 2ème ligne est créée. Il y aura de l'espace autour des deux lignes */
+				/* space-evenly: si on n'a pas assez d'espace sur une ligne, une 2ème ligne est créée. Il y aura un espace égal avant, après et entre les deux lignes */
+            }
+
+			.s1 {
+				height: 16em;
+			}
+        </style>
+	</head>
+	<body>
+	    <header>
+	        <h1>Flexbox - Exemple 06</h1>
+	    </header>
+		<section class="parent s1">
+		  <article class="enfant">Item 1.1</article>
+		  <article class="enfant">Item 1.2</article>
+		  <article class="enfant">Item 1.3</article>
+		  <article class="enfant">Item 1.4</article>
+		  <article class="enfant">Item 1.5</article>
+		  <article class="enfant">Item 1.6</article>
+		  <article class="enfant">Item 1.7</article>
+		  <article class="enfant">Item 1.8</article>
+		</section>
+		<section class="parent s2">
+		  <article class="enfant">Item 2.1</article>
+		  <article class="enfant">Item 2.2</article>
+		  <article class="enfant">Item 2.3</article>
+		  <article class="enfant">Item 2.4</article>
+		</section>
+	</body>
+</html>

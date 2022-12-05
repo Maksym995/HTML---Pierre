@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, tr, td, th {
+            border: 2px solid #000000;
+            border-collapse: collapse;
+        }
+        td {padding: 5px;
+           /* text-align: center;*/}
+
+        tbody tr:nth-child(odd) {
+            background-color: #999999;
+        }
+
+        tbody tr:hover {
+            background-color: rgba(147, 147, 238, 0.733);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 width="50%" margin="0 auto">
+            Mon tableau HTML
+        </h1>
+    </main>
+    <table>
+
+      <thead>
+        <tr><th colspan="2">Formateurs</th></tr>
+        <tr><th width="150px">Nom</th><th width="250px">Prénom</th></tr>
+      </thead>
+
+      <tbody>
+        <tr><td>Pitz</td><td>Michael</td></tr>
+        <tr><td>Sandron</td><td>Pierre</td></tr>
+        <tr><td>Palsano</td><td>André</td></tr>
+        <tr><td><img src="../HTML-CSS/fondweb-Récupéré.png" alt="img" width="100%" height="auto"></td><td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, amet! Doloribus, reprehenderit tempora ea voluptate labore provident laboriosam sit ad similique fuga possimus natus optio corrupti temporibus cumque? Odio, nam.</td></tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+            <td colspan="2" style="text-align: right"> Total = 3</td>
+        </tr>
+      </tfoot>
+      
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+form {
+    display:table;          /* équivalent de la balise <table> */
+}
+
+form div {
+    display: table-row;     /* équivalent de la balise <tr> */
+}
+
+select, input {
+    display: table-cell;    /* équivalent de la balise <td> */
+    width:200px;
+}
+
+label {
+    text-align: right;
+    display: table-cell;
+    width: 100px;
+}
+
+input[type="submit"] {
+    display: table-cell;
+    margin-top: 20px;
+}

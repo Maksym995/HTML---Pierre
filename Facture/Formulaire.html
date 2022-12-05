@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+<body>
+    <h1>Formulaire</h1>
+    <!-- attribut method => Méthode GET : les infos sont inscrites dans l'URL
+         attribut action => si vide, la page est envoyée à elle même 
+         attribut name => pour identifier le formulaire 
+    -->
+    <form action="traitement.php" method="GET" name="forlm1">
+        <!-- Champ de texte avec son label (le got du label doit avoir la même valeur que l'id de l'élément de formulaire)
+        le placegolder affiche un texte provisoire dans l'élément -->
+        <label for="nom">Nom :</label> <input type="text" name="nom" id="nom" placeholder="Entrez ici votre nom" required>
+        <br>
+        <label for="prenom">Prémon :</label> <input type="text" name="prenom" id="prenom" placeholder="Entrez ici votre prénom" required>
+        <br><br>
+        <label for="">Titre :</label>
+        <br>
+        <!-- Groupe de radio boutons : Ils doivent avoir le même name pour être dans le même groupe
+        Si un est coché les autres sont décauchés 
+        Pour déterminé celui coché à l'affichage, on ajoute l'atribut "cheked"
+        -->
+        <input type="radio" name="titre" id="M" checked><label for="M">Monsieur</label>
+        <br>
+        <input type="radio" name="titre" id="Mme"><label for="Mme">Madame</label>
+        <br><br>
+        <!-- Champ de type Date -->
+        <label for="brithdate">Date de naissance</label> <input type="date" name="naissance" id="brithdate" required>
+        <br>
+        <!-- Champ de type email -->
+        <label for="email">Email :</label> <input type="email" name="email" id="email" placeholder="Votre mail" required>
+        <br>
+        <!-- Champ de type Mot de Passe -->
+        <label for="mdp">Mot de passe :</label> <input type="password" name="mdp" id="mdp" placeholder="Votre mot de passe" required>
+        <br>
+        <br>
+        <label for="message">Laissez votre commentaire</label>
+        <br>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <br>
+        <!-- Bouton d'envoie -->
+        <input type="submit" value="Envoyer"> 
+
+
+
+
+
+
+
+    </form>
+</body>
+</html>

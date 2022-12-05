@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Connexion</h1>
+    <!-- Le formulaire sert à se connecter, on suppose qu'on est déjà connu (enregistré) 
+    Il faut doonc juste ebtrer sib identifiant et son mot de passe
+    Pour garder l'anonymat, on va utiliser la méthode POST
+    Les deux champs sont obligatoires
+    -->
+    <form method="POST" action="connexion.php" name="login">
+        <label for="nom">Identifiant :</label><input type="text" name="nom" id="nom" required>
+        <label for="pass">Mot de passe</label> <input type="password" name="pass" id="pass" required>
+        <input type="submit" value="Se connecter">
+
+
+
+    </form>
+    
+</body>
+</html>

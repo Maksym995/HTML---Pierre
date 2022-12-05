@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Facture.css">
+</head>
+<body class="background">
+
+    <h1>Facture</h1>
+        <div>
+             <p class="italic"><strong> Monsieur DUPONT Jacques</strong></p>
+             <p class="italic">Avenue du Parc, 89</p>
+             <p class="italic">1060 Saint-Gilles</p>
+        </div>
+    <h2>Client : 1029875 - Numéro de facture : BE221004-456 </h2>
+        <table>
+            <tr>
+                 <th class="description">Description</th>
+                 <th class="taille">Quantité</th>
+                 <th class="taille">P.U. HTVA</th>
+                 <th class="taille">Prix HTVA</th>
+            </tr>
+            <tr>
+                <td class="coloneun">PC ACER Nitro 5</td>
+                <td class="taille">3</td>
+                <td class="prix">1099.00€</td>
+                <td class="prix">3297.00€</td>
+            </tr>
+            <tr>
+                <td class="coloneun">Mémoire RAM 8GB supplémentaire</td>
+                <td class="taille">6</td>
+                <td class="prix">54.99€</td>
+                <td class="prix">329.94€</td>
+            </tr>
+            <tr>
+                <td class="coloneun">Licence Win10Pro</td>
+                <td class="taille">3</td>
+                <td class="prix">9.89€</td>
+                <td class="prix">29.67€</td>
+            </tr>
+            <tr>
+                <td id="center" rowspan="3">TOTAUX</td>
+                <td colspan="2" id="center">Total (HTVA)</td>
+                <td class="prix">3656.61€</td>
+            </tr>
+            <tr>
+                <td colspan="2">TVA 21%</td>
+                <td class="prix">767.89€</td>
+            </tr>
+            <tr>
+                <td colspan="2">Total(TVAC)</td>
+                <td class="prix">4424.50€</td>
+            </tr>
+        </table>
+</body>
+</html>

@@ -1,0 +1,29 @@
+/* Pour tous les blocs on utilise une classe .bloc */
+.bloc {
+    width: 500px;
+    height: 200px;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#bloc1 {
+    background-color: aquamarine;
+    position: relative;
+}
+
+#bloc2 {
+    background-color: blanchedalmond;
+    position: relative;
+    top: 50px;
+    left: 100px;
+}
+
+#bloc3 {
+    background-color: brown;
+}
+
+#bloc4 {
+    background-color: lightblue;
+}

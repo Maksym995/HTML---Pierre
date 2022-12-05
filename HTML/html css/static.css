@@ -1,0 +1,64 @@
+header {
+    display: block;
+    margin:0 auto;
+    width: 960px;
+    height: 150px;
+    border: 3px solid black;
+    background-color: aliceblue;
+    }
+
+#top {
+    display: inline;
+    position: relative;
+    left: 200px;
+    bottom: 60px;
+    text-size-adjust: 150%;
+    }
+
+#logocss {
+    height: 150px;
+    position: relative;
+    left: 25px;
+}
+
+li {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    width: 200px;
+    list-style-type: none;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin: 10px;
+    background-color: aliceblue;
+}
+
+.li {
+    display: block;
+    width: 320px;
+    position: relative;
+    left: 450px;
+
+}
+
+/* Pour tous les blocs on utilise une classe .bloc */
+.bloc {
+    display: block;
+    width: 640px;
+    position: relative;
+    left: 770px;
+    top: -250px;
+/*    border: 3px solid black; */
+/*    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+*/
+}
+
+#retourtop {
+    width: 50px;
+    display: block;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
