@@ -1,0 +1,128 @@
+        /*MOBILE FIRST */
+        /* Par défaut, les styles définis au début sont les styles pour smartphone (mobile).
+        Si l'écran est plus large, alors on adapte selon les besoins */
+        /* Styles par défaut pour smartphone */
+        body {
+            background-color: lightblue;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            width: 400px;
+            background-color: antiquewhite;
+
+            /* on veut placer ce titre h1 à gauche (flex-start) alors que tous les éléments sont au centre, puisque align-items=center dans le div .page */
+            align-self: flex-start;
+        }
+        p {
+            color: crimson;
+
+            /* Si on veut afficher ce paragraphe après les autres éléments (les autres flex items) dans le flex-container, on donne une valeur plus grande que la valeur par défaut (order:0), sans changer le HTML */
+            order: 1;
+        }
+
+        /* ---- Page ----- */
+        .page {
+            width: 100vw;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* tous les items sont au centre */
+        }
+
+        /* ----- Menu ---- */
+        .menu {
+            width: 100%;
+        }
+
+        .menu a {
+            text-decoration: none;
+            display: block;
+            height: 30px;
+            border: 2px solid black;
+            color: black;
+            background-color: white;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .galerie {
+            width: 90vw;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+        }
+        /* la galerie photo affiche 2 photos par ligne ( 2 colones ) */
+        /* 2 photos = max 50%, donc si on veut garder un espace entre chacune, on met un peu moins =>45% */
+        .galerie img {
+            max-width: 45%;
+            height: auto;
+            border: 2px solid black;
+            padding: 3px;
+            margin: 10px 0;
+        }
+
+        /* ================== Style pour tablette =====================*/
+        /* Je modifie uniquement les propriétés qui ont des valeurs différentes pour un écran */
+        /* écran > 640px et < 1024 de large */
+        @media screen and (min-width:640px) and (max-width:1024px) {
+            /* je change la couleur de fond */
+            body{
+                background-color: burlywood;
+            }
+
+            p {
+                font-weight: bold;
+                /* on remet order:0 pour afficher le paragraphe entre le menu et la galerie */
+                order: 0;
+            }
+
+            /* Le menu passe à l'horizontale et prend toute la largeur */
+            .menu {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around
+            }
+            .menu a {
+                width: 120px;
+            }
+
+            /* La galerie affiche trois photos par ligne */
+             /* 3 photos = max 33%, donc si on veut garder un espace entre chacune, on met un peu moins =>30% */
+            .galerie img {
+                max-width: 30%;
+            }
+        }
+
+        /* ================= Style pour PC ====================*/
+        /* je modifie uniquement les propriétés qui ont des valeurs différentes pour un autre écran */
+        /* écran > 1024px */
+        @media screen and (min-width:1024px) {
+            body {
+                background-color: white;
+            }
+            p {
+                font-weight: bold;
+            }
+            .menu {
+                width: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .menu a {
+                width: 120px;
+                margin-right: 20px;
+                border-radius: 15px;
+            }
+            /* 4 photos = max 25%, donc si on veut garder un espace entre chacune, on met un peu moins =>22% */
+            .galerie img {
+                max-width: 22%;
+            }
+        }
+
+
