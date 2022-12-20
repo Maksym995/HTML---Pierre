@@ -1,0 +1,37 @@
+body { display: ;
+    justify-content: ;
+    background-image: url("../medias/FOND.png");
+    background-repeat: no-repeat;
+    background-size:cover;}
+
+.logo {
+    margin-left: 126px;
+    margin-top: 30px;
+}
+
+.menu nav{
+    display:flex ;
+    justify-content: center;
+}
+
+.menu nav ul{ 
+    display: flex;
+    justify-content:space-between;
+    margin: 0vw, 175px;
+    list-style: none;  /*CTRL F5 rafraichir le cache */
+}
+
+.menu nav ul li{ 
+    display: flex;    
+    border: 1px solid black;
+    border-radius: 7px ;
+    list-style: none;  /*CTRL F5 rafraichir le cache */
+}
+
+.mediashome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0vw, 175px;
+}
+
