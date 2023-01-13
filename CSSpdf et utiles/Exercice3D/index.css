@@ -1,0 +1,110 @@
+* {
+    --image-1: url("https://images.pexels.com/photos/37833/rainbow-lorikeet-parrots-australia-rainbow-37833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    --image-2: url("https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    --image-3: url("https://images.pexels.com/photos/162318/cheetahs-cubs-two-together-162318.jpeg?auto=compress&cs=tinysrgb&w=400");
+    --image-4: url("https://images.pexels.com/photos/1327405/pexels-photo-1327405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    --image-5: url("https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    --image-6: url("https://images.pexels.com/photos/982230/pexels-photo-982230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.textliens {
+bottom: 5em;
+    position: relative;
+
+    text-align: center;
+
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+.cube-container {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    perspective: 45em;
+
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition-duration: 2s;
+}
+
+.cube-side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+}
+
+.radio-button {
+    margin-bottom: 5em;
+}
+
+.cube-side:nth-child(1) {
+    transform: rotateY(0deg) translateZ(200px);
+    background-image: var(--image-1);
+}
+.cube-side:nth-child(2) {
+    transform: rotateY(90deg) translateZ(200px);
+    background-image: var(--image-2);
+}
+.cube-side:nth-child(3) {
+    transform: rotateY(180deg) translateZ(200px);
+    background-image: var(--image-3);
+}
+.cube-side:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(200px);
+    background-image: var(--image-4);
+}
+.cube-side:nth-child(5) {
+    transform: rotateX(-90deg) translateZ(200px);
+    background-image: var(--image-5);
+}
+.cube-side:nth-child(6) {
+    transform: rotateX(90deg) translateZ(200px);
+    background-image: var(--image-6);
+}
+
+
+.radio-button:checked ~ .cube {
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.radio-button:nth-child(1):checked ~ .cube { 
+    transform: rotateX(-15deg) rotateY(20deg);
+}
+.radio-button:nth-child(2):checked ~ .cube { 
+    transform: rotateX(-15deg) rotateY(180deg);
+}
+.radio-button:nth-child(3):checked ~ .cube { 
+    transform: rotateX(-15deg) rotateY(90deg);
+}
+.radio-button:nth-child(4):checked ~ .cube { 
+    transform: rotateX(-15deg) rotateY(-90deg);
+}
+.radio-button:nth-child(5):checked ~ .cube { 
+    transform: rotateX(-105deg) rotateY(0deg);
+}
+.radio-button:nth-child(6):checked ~ .cube { 
+    transform: rotateX(75deg) rotateY(0deg);
+}
+
+
+
