@@ -1,0 +1,68 @@
+#global {
+    display: grid;
+    grid-template-columns: 200px 70% auto;
+    /* 3valeurs donc 3 colonnes */
+    /* 1: largeur fixe de 200px */
+    /* 2: largeur variable de 70% de la largeur de l'ecran */
+    /* 3: valeur automatiquement calculée - espace restant */
+    grid-template-rows: [au-dessus] 200px [bas-du-header]auto 200px;
+}
+
+header {
+    background-color: aquamarine;
+    /* démarre à la ligne de rangée 1 */
+    /* se termine à la ligne de rangée 2 */
+    /*grid-row-start: 1;
+    grid-row-end: 2; */
+    /* OU */
+    grid-row: 1 / 2;    /* autre notation */
+    /*OU*/
+    /*grid-row: au-dessus / bas-du-header;*/
+    /* démarre à la ligne de colone 1 */
+    /* se termine à la ligne de colone 4 */
+    /*grid-column-start: 1;
+    grid-column-end: 4; */
+    /* OU */
+    grid-column: 1 / 4;  /* autre notation */
+}
+
+nav {
+    background-color: burlywood;
+    /* grid-row-start: 2;
+    grid-row-end: 3; */
+    /* OU */
+    grid-row: 2; /*encore plus raccourci car les lignes se suivent */
+    /*grid-column-start: 1;
+    grid-column-end: 2;*/
+    /*OU*/
+    grid-column: 1;/*encore plus raccourci car les lignes se suivent */
+}
+
+main {
+    background-color: coral;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+aside {
+    background-color: cornflowerblue;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+footer {
+    background-color: black;
+    color: white;
+   /*grid-row-start: 3;
+    grid-row-end: 4;*/
+    grid-row: 3;
+    /*
+    grid-column-start: 1;
+    grid-column-end: 4;
+    */
+    grid-column: 1 /span 3;    /* équivalent à grid-column 1/4 */
+}

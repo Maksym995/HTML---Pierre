@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#global {
+    display: grid;
+    grid-template-columns: 200px 70% auto;
+    grid-template-rows:  200px auto 200px;
+
+    /* definition des goutieres */
+    column-gap: 10px;
+    row-gap: 5px;
+}
+
+header {
+    background-color: aquamarine;
+    grid-row: 1 / 2;    /* autre notation */
+    grid-column: 1 / 4;  /* autre notation */
+}
+
+nav {
+    background-color: burlywood;
+    grid-row: 2; /*encore plus raccourci car les lignes se suivent */
+    grid-column: 1;/*encore plus raccourci car les lignes se suivent */
+}
+
+main {
+    background-color: coral;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+aside {
+    background-color: cornflowerblue;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+footer {
+    background-color: black;
+    color: white;
+   /*grid-row-start: 3;
+    grid-row-end: 4;*/
+    grid-row: 3;
+    /*
+    grid-column-start: 1;
+    grid-column-end: 4;
+    */
+    grid-column: 1 /span 3;    /* équivalent à grid-column 1/4 */
+}

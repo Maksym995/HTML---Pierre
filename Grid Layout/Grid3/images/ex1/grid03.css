@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+}
+
+#galerie {
+    width: 600px;
+    height: 450px;
+    border: solid 3px black;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 130px);
+
+    justify-content: center;
+    align-content: start;
+
+    justify-items: center;
+    align-items: center;
+}
+
+#galerie img:nth-child(4) {
+    justify-self: left;
+    align-self: start;
+    
+}

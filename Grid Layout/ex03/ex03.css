@@ -1,0 +1,23 @@
+body {
+    margin: 20px;
+}
+
+.conteneur {
+    width: 800px;
+    height: 300px;
+    background-color: powderblue;
+    color: #444;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 80px auto);
+    gap: 10px;
+}
+
+.boite {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 120%;
+}
+
